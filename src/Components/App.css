@@ -1,0 +1,270 @@
+body {
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    margin: 2rem auto 2rem auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.drop-board {
+    width: 100%;
+    height: 800px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-bottom: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.images-board-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.slide-arrow {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slide-arrow--left {
+    left: -50px;
+}
+
+.slide-arrow--right {
+    right: -50px;
+}
+
+.images-board {
+    overflow-x: hidden;
+}
+
+/*.images-board-inner {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 1rem;*/
+/*    transition: all .2s ease-in-out;*/
+/*}*/
+
+.images-board--item {
+    flex-basis: 120px;
+    margin-right: 35px;
+    flex-shrink: 0;
+    padding: 1rem;
+    box-sizing: content-box;
+}
+
+.images-board--item.big-width {
+    width: 300px;
+}
+
+.images-board--item.image-landed {
+    position: absolute;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.delete-icon {
+    position: absolute;
+    top: -20px;
+    right: -16px;
+    background-color: #000;
+    padding: .1rem .4rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.delete-icon.active {
+    display: block;
+}
+
+.scale-container {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    display: none;
+    flex-direction: column;
+    color: #fff;
+    background-color: #000;
+    align-items: center;
+    justify-content: stretch;
+    font-size: 1.5rem;
+}
+
+.scale-container.active {
+    display: flex;
+}
+
+.scale-container__plus,
+.scale-container__minus {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.scale-container__plus {
+    border-bottom: 1px solid #fff;
+    line-height: 1;
+}
+
+.scale-container__plus:hover,
+.scale-container__minus:hover {
+    background-color: #6d6d6d;
+}
+
+.top-block {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.bg-list-container {
+    flex-basis: 20%;
+    border: 1px solid #a4bac9;
+    background-color: #fff;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+ul.bg-list-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bg-list-ul__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.bg-list-ul__item img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.bg-list-ul__item:hover {
+    border: 1px solid red;
+}
+
+.background-list {
+    display: flex;
+    margin: 15px;
+    height: 40px;
+}
+
+.background-list__item {
+    margin-right: 15px;
+}
+
+.background-list__item div {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border: 1px solid transparent;
+}
+
+.filter-container {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.filter-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+}
+
+.filter-content__item {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.filter-content__item:hover {
+    text-decoration: underline;
+}
+
+.filter-content .card {
+    border: none;
+}
+
+.filter-content .accordion>.card:not(:last-of-type),
+.filter-content .accordion>.card:not(:first-of-type) {
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-radius: 0;
+}
+
+.filter-content .card .card-header {
+    background-color: transparent;
+    border-bottom:none;
+}
+
+.filter-content .card .card-header .btn-link {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.filter-content .card .card-header .btn-link.focus,
+.filter-content .card .card-header .btn-link:focus {
+    box-shadow: none;
+}
+
+.color-filter-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.color-filter-item span {
+    margin-right: .7rem;
+}
+
+.color-value:hover {
+    text-decoration: underline;
+}
+
+.filter-range .rc-slider-handle,
+.filter-range .rc-slider-handle:hover,
+.filter-range .rc-slider-handle-click-focused:focus{
+    border: 2px solid red;
+}
+
+.filter-range .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+    box-shadow: 0 0 0 5px red;
+    border: 1px solid red;
+}
+
+.filter-range .rc-slider-track {
+    background-color: black;
+}
+
+.filter-range-tooltip {
+    margin-bottom: 5px;
+}
